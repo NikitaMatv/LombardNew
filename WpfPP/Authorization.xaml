@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfPP.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPP"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStyle="None"  
+        WindowStartupLocation="CenterScreen"
+        Title="Authorization" Height="400" Width="700">
+    <Grid>
+        <Image Source="/img/aut.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBox x:Name="text_1" Opacity=".7" HorizontalAlignment="Left" Margin="75,131,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  FontFamily="Inter" Text="login" VerticalAlignment="Top" Width="358" Height="29" FontWeight="Normal" FontSize="19" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFCECECE" SelectionBrush="White"/>
+        <TextBox x:Name="text_2" Opacity=".7" HorizontalAlignment="Left" Margin="75,206,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  FontFamily="Inter" Text="password" VerticalAlignment="Top" Width="358" Height="29" FontWeight="Normal" FontSize="19" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFCECECE" SelectionBrush="White"/>
+
+        <TextBox x:Name="text_login" HorizontalAlignment="Left" Margin="75,131,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  FontFamily="Inter" Text="" VerticalAlignment="Top" Width="358" Height="29" FontWeight="Normal" FontSize="19" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFCECECE" SelectionBrush="White" TextChanged="text_login_TextChanged"/>
+        <TextBox x:Name="text_password" HorizontalAlignment="Left" Margin="75,206,0,0"  VerticalContentAlignment="Center"  FontFamily="Inter" VerticalAlignment="Top" Width="358" Height="29" FontWeight="Normal" FontSize="19" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFCECECE" SelectionBrush="White" TextChanged="text_password_PasswordChanged"/>
+
+        <Button x:Name="button_register" FontWeight="Medium" Margin="493,330,15,30" Background="{x:Null}" Content="SING UP" FontFamily="Inter" FontSize="19" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="White" Foreground="White" Click="button_register_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="x" FontWeight="Medium" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Left" FontFamily="Inter" FontSize="30" HorizontalAlignment="Left" Margin="676,-9,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Height="37" Width="19" Click="Button_Exit"/>
+
+        <Button x:Name="button_in" FontWeight="Medium"  Margin="123,330,385,30" Background="White" Content="SING UP" FontFamily="Inter" FontSize="19" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="button_in_Click" BorderBrush="{x:Null}" Foreground="Black" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Visibility="Hidden" x:Name="error_pass_lenght" Content="Passwords must include at least 8 characters" FontFamily="Inter" FontSize="10" HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Center" Width="263" Foreground="#FFE81123"/>
+
+
+    </Grid>
+</Window>
